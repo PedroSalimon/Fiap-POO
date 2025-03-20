@@ -33,7 +33,7 @@ public class Bilhete {
     // metodo para passar na catraca
     public void passarCatraca() {
         double debito;
-        if (usuario.tipoTarifa.equalsIgnoreCase("tarifa")){
+        if (usuario.tipoTarifa.equalsIgnoreCase("comum")){
             debito = TARIFABASE;
         }
         else {
