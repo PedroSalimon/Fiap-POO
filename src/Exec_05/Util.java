@@ -49,6 +49,9 @@ public class Util {
                     case 2:
                         listarBilhete();
                         break;
+                    case 3:
+                        removerBilhete();
+                        break;
                 }
             }
         } while (opcao != 4);
@@ -75,6 +78,17 @@ public class Util {
         showMessageDialog(null, aux);
     }
 
+    private void removerBilhete () {
+        int i = pesquisarCpf(), resposta;
+        if (i != -1) {
+            resposta = showConfirmDialog(null, "Tem certeza que deseja remover");
+            if (resposta == YES_OPTION) {
+
+            }
+            bilhete[i] = bilhete[index-1];
+            index--;
+        }
+    }
 
     private void menuUsuario () {
         int opcao = 0;
@@ -103,24 +117,6 @@ public class Util {
                 }
             } while (opcao != 4);
         }
-//        do {
-//            opcao = parseInt(showInputDialog(menuUsuario));
-//            if (opcao < 1 || opcao > 4) {
-//                showMessageDialog(null, "Opção Inválida");
-//            } else {
-//                switch (opcao) {
-//                    case 1:
-//                        consultarSaldo(i);
-//                        break;
-//                    case 2:
-//                        carregarBilhete(i);
-//                        break;
-//                    case 3:
-//                        passarCatraca(i);
-//                        break;
-//                }
-//            }
-//        } while (opcao != 4);
     }
 
     private int pesquisarCpf () {
