@@ -13,16 +13,18 @@ public class Produto {
         this.fornecedor = fornecedor;
     }
 
-    public String getNome () {
+    public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public double getValor () {
+    public double getValor() {
         return valor;
     }
+
     public void setValor(double valor) {
         this.valor = valor;
     }
@@ -30,13 +32,15 @@ public class Produto {
     public int getQtdEstoque() {
         return qtdEstoque;
     }
+
     public void setQtdEstoque(int qtdEstoque) {
         this.qtdEstoque = qtdEstoque;
     }
 
-    public Fornecedor getFornecedor () {
+    public Fornecedor getFornecedor() {
         return fornecedor;
     }
+
     public void setFornecedor(Fornecedor fornecedor) {
         this.fornecedor = fornecedor;
     }
