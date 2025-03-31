@@ -1,4 +1,6 @@
-package Exec_Capsulamento;
+package Exec_Capsulamento.br.fiap.produto;
+
+import Exec_Capsulamento.br.fiap.fornecedor.Fornecedor;
 
 public class Produto {
     private String nome;

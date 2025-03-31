@@ -1,4 +1,6 @@
-package Exec_Capsulamento;
+package Exec_Capsulamento.br.fiap.main;
+
+import Exec_Capsulamento.br.fiap.fornecedor.Fornecedor;
 
 public class Main {
     public static void main(String[] args) {

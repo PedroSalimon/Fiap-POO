@@ -1,4 +1,4 @@
-package Exec_Capsulamento;
+package Exec_Capsulamento.br.fiap.fornecedor;
 
 public class Fornecedor {
     private long cnpj;
