@@ -1,6 +1,6 @@
 package Exec_Círculo;
 
-public class Cilindro extends Forma{
+public class Cilindro extends Forma implements Volume{
 
     private double altura;
 
