@@ -2,8 +2,6 @@ package Exec_Capsulamento.br.fiap.Util;
 import Exec_Capsulamento.br.fiap.fornecedor.Fornecedor;
 import Exec_Capsulamento.br.fiap.produto.Produto;
 
-import java.text.DecimalFormat;
-
 import static javax.swing.JOptionPane.*;
 import static java.lang.Integer.*;
 import static java.lang.Long.*;
@@ -11,7 +9,7 @@ import static java.lang.Double.*;
 
 public class Util {
     private Fornecedor[] fornecedor = new Fornecedor[3];
-    private Produto [] produto = new Produto[2*fornecedor.length];
+    private Produto[] produto1 = new Produto[2*fornecedor.length];
     private int indexProduto = 0, indexFornecedor = 0;
 
     public void menuCadastro () {
@@ -54,7 +52,7 @@ public class Util {
         nome = showInputDialog("Nome do produto:");
         qtdEstoque = parseInt(showInputDialog("Qtd em estoque:"));
         valorUnitário = parseDouble(showInputDialog("Valor do produto:"));
-        produto[indexProduto] = new Produto(nome, valorUnitário, qtdEstoque, fornecedor);
+        produto1[indexProduto] = new Produto(nome, valorUnitário, qtdEstoque, fornecedor);
         indexProduto++;
     }
 
@@ -62,11 +60,11 @@ public class Util {
         String aux = "Produto Inexistente";
         String nome = showInputDialog("Nome do produto:");
         for (int i = 0; i < indexProduto; i ++) {
-            if (produto[i].getNome().equalsIgnoreCase(nome)) {
+            if (produto1[i].getNome().equalsIgnoreCase(nome)) {
                 aux= "";
-                aux +=  "Nome: " + produto[i].getNome() +
-                        "\nValor: R$" + produto[i].getValor() +
-                        "\nFornecedor: " + produto[i].getFornecedor().getNome();
+                aux +=  "Nome: " + produto1[i].getNome() +
+                        "\nValor: R$" + produto1[i].getValor() +
+                        "\nFornecedor: " + produto1[i].getFornecedor().getNome();
                 break;
             }
         }
