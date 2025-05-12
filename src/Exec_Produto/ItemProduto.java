@@ -1,28 +1,31 @@
 package Exec_Produto;
 
+import java.text.DecimalFormat;
+
 public class ItemProduto {
-
-    private int qtd;
     private Produto produto;
+    private int quantidadeComprada;
 
-    public ItemProduto(Produto produto, int qtd) {
+    public ItemProduto(Produto produto, int quantidadeComprada) {
         this.produto = produto;
-        this.qtd = qtd;
+        this.quantidadeComprada = quantidadeComprada;
     }
 
-    public int getQtd() {
-        return qtd;
+    @Override
+    public String toString() {
+        DecimalFormat df = new DecimalFormat("#,##0.00");
+        String aux = "";
+        aux += "Produto: " + produto.getNome() + "\n";
+        aux += "Valor unitári: R$ " + produto.getValor() + "\n";
+        aux += "Quantidade compradada: " + quantidadeComprada + "\n";
+        return aux;
     }
 
-    public void setQtd(int qtd) {
-        this.qtd = qtd;
+    public double calcularTotal() {
+        return this.produto.getValor() * this.quantidadeComprada;
     }
 
     public Produto getProduto() {
         return produto;
-    }
-
-    public void setProduto(Produto produto) {
-        this.produto = produto;
     }
 }
