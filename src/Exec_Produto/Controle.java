@@ -45,9 +45,11 @@ public class Controle {
                     case 1:
                         comprar();
                         break;
+                    case 3:
+                        removerProduto();
+                        break;
                     case 4:
                         fecharCompra();
-                        break;
                 }
             } catch (Exception e) {
                 showMessageDialog(null, e.getMessage());
@@ -75,6 +77,12 @@ public class Controle {
         showMessageDialog(null, "R$: " + total);
     }
 
+    private void removerProduto () {
+        String nome = showInputDialog("Qual produto deseja remover?");
+        Produto produto = new Produto(nome);
+        nf.removerItemProduto(produto);
+
+    }
 
     private String gerarMenu() {
         String aux = "SISTEMA DE COMPRAS ONLINE\n";

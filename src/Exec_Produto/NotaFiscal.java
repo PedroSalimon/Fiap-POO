@@ -3,7 +3,7 @@ package Exec_Produto;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotaFiscal {
+public class  NotaFiscal {
     private List<ItemProduto> listaProduto;
     private Cliente cliente;
     private boolean status;
@@ -11,14 +11,19 @@ public class NotaFiscal {
     public NotaFiscal(Cliente cliente) {
         this.cliente = cliente;
         this.listaProduto = new ArrayList<ItemProduto>();
+        this.status = true;
     }
 
     public void adicionarItemProduto(ItemProduto itemProduto) {
         this.listaProduto.add(itemProduto);
     }
 
-    public void removerItemProduto(ItemProduto itemProduto) {
-        this.listaProduto.remove(itemProduto);
+    public void removerItemProduto(Produto produto) {
+        for (ItemProduto p : listaProduto) {
+            if (p.getProduto().equals(produto)) {
+                listaProduto.remove(p);
+            }
+        }
     }
 
     public double calcularTotal() {
