@@ -6,9 +6,16 @@ public class Sensor {
     private String id;
     private List<Double> leituras;
 
-    public Sensor(String id, List<Double> leituras) {
+    public Sensor(String id) {
         this.id = id;
-        this.leituras = leituras;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public List<Double> getLeituras() {
+        return leituras;
     }
 
     public void registrarLeituras(List<Double> leituras) throws LeituraInvalidaException {
